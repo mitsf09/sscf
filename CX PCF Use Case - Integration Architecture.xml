@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model xmlns="http://www.opengroup.org/xsd/archimate/3.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengroup.org/xsd/archimate/3.0/ http://www.opengroup.org/xsd/archimate/3.1/archimate3_Diagram.xsd" identifier="id-6f0cd885320645fc91ae85def51430f7">
+  <name xml:lang="en">CX PCF Use Case</name>
+  <elements>
+    <element identifier="id-36fed5282b194d3e8c19fd84dc42539c" xsi:type="ValueStream">
+      <name xml:lang="en">(Raw) Materials</name>
+    </element>
+    <element identifier="id-88bd9730d8b8445ba6c018b1b4da6ae8" xsi:type="ValueStream">
+      <name xml:lang="en">Part/Component Manufacturing</name>
+    </element>
+    <element identifier="id-4ce9152f5b4b43c497653a9522b91d7b" xsi:type="ValueStream">
+      <name xml:lang="en">OEM</name>
+    </element>
+    <element identifier="id-dbf24f007b2a469c905f962b5387a246" xsi:type="BusinessActor">
+      <name xml:lang="en">PCF Controller</name>
+    </element>
+    <element identifier="id-44fc92f1da2a498582405948ff7fa9fc" xsi:type="BusinessActor">
+      <name xml:lang="en">PCF Calculator</name>
+    </element>
+    <element identifier="id-b3230e2f99de479fa84fe35674a6bc29" xsi:type="BusinessObject">
+      <name xml:lang="en">PCF x-1</name>
+    </element>
+    <element identifier="id-f100ae7917984e3496019ade2ce06f2f" xsi:type="BusinessObject">
+      <name xml:lang="en">PCF x</name>
+    </element>
+    <element identifier="id-03dd5366dc384f5cbc2b9468ca6a1dfd" xsi:type="BusinessObject">
+      <name xml:lang="en">PCF n</name>
+    </element>
+    <element identifier="id-eed08b7ebf554101af84453e2b026570" xsi:type="BusinessObject">
+      <name xml:lang="en">PCF 2</name>
+    </element>
+    <element identifier="id-eaa23e0b31524de594622e17e1b984e3" xsi:type="BusinessObject">
+      <name xml:lang="en">PCF 1</name>
+    </element>
+    <element identifier="id-694e5d9a5a8e4caa8f5636f8359840b6" xsi:type="BusinessObject">
+      <name xml:lang="en">PCF Vehicle</name>
+    </element>
+    <element identifier="id-0b1e88a431024c9887bcd5e632013bf7" xsi:type="ApplicationComponent">
+      <name xml:lang="en">PCF Data Exchange App1</name>
+    </element>
+    <element identifier="id-50a9a604e7d64752b3e3a791c9027882" xsi:type="ApplicationComponent">
+      <name xml:lang="en">PCF Calculation App1</name>
+    </element>
+    <element identifier="id-1288cab3253f498fb329d858a7c67671" xsi:type="ApplicationComponent">
+      <name xml:lang="en">PCF Data Exchange App2</name>
+    </element>
+    <element identifier="id-4b07f46ff5b246b484e7c942706ac3af" xsi:type="ApplicationComponent">
+      <name xml:lang="en">PCF Calculation App2</name>
+    </element>
+    <element identifier="id-d51d3bd56bde4564b099d45330edea85" xsi:type="CommunicationNetwork">
+      <name xml:lang="en">Catena-X Data Space</name>
+    </element>
+    <element identifier="id-be9ff0a7351e4c3eaf14e4e003c78766" xsi:type="Material">
+      <name xml:lang="en">Supplier Tier x-1</name>
+    </element>
+    <element identifier="id-93548a53d0ff489e92033950d44c6d1e" xsi:type="Material">
+      <name xml:lang="en">Supplier Tier x</name>
+    </element>
+    <element identifier="id-6717158b666546b4a1c3518e501e12f9" xsi:type="Facility">
+      <name xml:lang="en">Supplier Tier n</name>
+    </element>
+    <element identifier="id-49faa0b66e034492b2b4595e9dff50c4" xsi:type="Facility">
+      <name xml:lang="en">Supplier Tier 2</name>
+    </element>
+    <element identifier="id-0cd46c8c144146918e1fed6b7beab359" xsi:type="Facility">
+      <name xml:lang="en">Supplier Tier 1</name>
+    </element>
+    <element identifier="id-f35610f18c03480b8a6ca200ae3e839d" xsi:type="Facility">
+      <name xml:lang="en">Vehicle manufacturing</name>
+    </element>
+  </elements>
+  <relationships>
+    <relationship identifier="id-ceaf322e04b24dc793fb3658458a1b1e" source="id-4b07f46ff5b246b484e7c942706ac3af" target="id-1288cab3253f498fb329d858a7c67671" xsi:type="Flow">
+      <name xml:lang="en">Calculated PCF</name>
+    </relationship>
+    <relationship identifier="id-6bc70d3b5199421ba60dfbcd44621ec0" source="id-50a9a604e7d64752b3e3a791c9027882" target="id-0b1e88a431024c9887bcd5e632013bf7" xsi:type="Flow">
+      <name xml:lang="en">Calculated PCF</name>
+    </relationship>
+    <relationship identifier="id-6394e9a5cc434bfc8d23d80bc52ffede" source="id-0b1e88a431024c9887bcd5e632013bf7" target="id-1288cab3253f498fb329d858a7c67671" xsi:type="Flow">
+      <name xml:lang="en">PCF Request</name>
+    </relationship>
+    <relationship identifier="id-cc2bd385be784ad18bd3e9ce383b7ac1" source="id-1288cab3253f498fb329d858a7c67671" target="id-0b1e88a431024c9887bcd5e632013bf7" xsi:type="Flow">
+      <name xml:lang="en">PCF Response</name>
+    </relationship>
+    <relationship identifier="id-14cbe3b23f304e10939d7af698d908b8" source="id-0b1e88a431024c9887bcd5e632013bf7" target="id-d51d3bd56bde4564b099d45330edea85" xsi:type="Flow">
+      <name xml:lang="en">PCF Request</name>
+    </relationship>
+    <relationship identifier="id-90fa9081e12745e4b1cb6bc69e317b13" source="id-d51d3bd56bde4564b099d45330edea85" target="id-1288cab3253f498fb329d858a7c67671" xsi:type="Flow">
+      <name xml:lang="en">PCF Request</name>
+    </relationship>
+    <relationship identifier="id-e6e7c82dfc804497a917b2054bfb8215" source="id-1288cab3253f498fb329d858a7c67671" target="id-d51d3bd56bde4564b099d45330edea85" xsi:type="Flow">
+      <name xml:lang="en">PCF Response</name>
+    </relationship>
+    <relationship identifier="id-d3989ceb7fb24743ab3b7138f88edda8" source="id-d51d3bd56bde4564b099d45330edea85" target="id-0b1e88a431024c9887bcd5e632013bf7" xsi:type="Flow">
+      <name xml:lang="en">PCF Response</name>
+    </relationship>
+    <relationship identifier="id-33e59d85296445f5aeb85265307c84e3" source="id-dbf24f007b2a469c905f962b5387a246" target="id-0b1e88a431024c9887bcd5e632013bf7" xsi:type="Association" />
+    <relationship identifier="id-4ee121a619f54dfe9245259a5b3a175a" source="id-44fc92f1da2a498582405948ff7fa9fc" target="id-50a9a604e7d64752b3e3a791c9027882" xsi:type="Association" />
+    <relationship identifier="id-a6ba3dbb418b4f7f93e9cff3cc0390fb" source="id-dbf24f007b2a469c905f962b5387a246" target="id-1288cab3253f498fb329d858a7c67671" xsi:type="Association" />
+    <relationship identifier="id-111909e5dbfd44b3aff04a476509a06c" source="id-44fc92f1da2a498582405948ff7fa9fc" target="id-4b07f46ff5b246b484e7c942706ac3af" xsi:type="Association" />
+    <relationship identifier="id-10446782d3174da3bf9e06abe0dd805c" source="id-be9ff0a7351e4c3eaf14e4e003c78766" target="id-b3230e2f99de479fa84fe35674a6bc29" xsi:type="Association" isDirected="true" />
+    <relationship identifier="id-63685841cd4147579d13f2abca52914c" source="id-b3230e2f99de479fa84fe35674a6bc29" target="id-93548a53d0ff489e92033950d44c6d1e" xsi:type="Association" isDirected="true" />
+    <relationship identifier="id-f59a1096865146edb9e91ca6bd7251cf" source="id-93548a53d0ff489e92033950d44c6d1e" target="id-f100ae7917984e3496019ade2ce06f2f" xsi:type="Association" isDirected="true" />
+    <relationship identifier="id-1cece03c8383494ea1180227c01203fd" source="id-f100ae7917984e3496019ade2ce06f2f" target="id-6717158b666546b4a1c3518e501e12f9" xsi:type="Association" isDirected="true" />
+    <relationship identifier="id-8b65e6258633466a8cf7e65d7ac6eec7" source="id-6717158b666546b4a1c3518e501e12f9" target="id-03dd5366dc384f5cbc2b9468ca6a1dfd" xsi:type="Association" isDirected="true" />
+    <relationship identifier="id-bf61b863d14c4fc1a2c825acb15c90ac" source="id-03dd5366dc384f5cbc2b9468ca6a1dfd" target="id-49faa0b66e034492b2b4595e9dff50c4" xsi:type="Association" isDirected="true" />
+    <relationship identifier="id-026766cd33404d0bb29b24e1b130558b" source="id-49faa0b66e034492b2b4595e9dff50c4" target="id-eed08b7ebf554101af84453e2b026570" xsi:type="Association" isDirected="true" />
+    <relationship identifier="id-455c9f9e0055460692ae7e6ca54ef739" source="id-eed08b7ebf554101af84453e2b026570" target="id-0cd46c8c144146918e1fed6b7beab359" xsi:type="Association" isDirected="true" />
+    <relationship identifier="id-b7387ac69af34b308b06b4cee8929def" source="id-0cd46c8c144146918e1fed6b7beab359" target="id-eaa23e0b31524de594622e17e1b984e3" xsi:type="Association" isDirected="true" />
+    <relationship identifier="id-ee67993d6eae4aef83b6ec4c1ed3c227" source="id-eaa23e0b31524de594622e17e1b984e3" target="id-f35610f18c03480b8a6ca200ae3e839d" xsi:type="Association" isDirected="true" />
+    <relationship identifier="id-9ecc03c52cac44238a2d62d063b25dd5" source="id-f35610f18c03480b8a6ca200ae3e839d" target="id-694e5d9a5a8e4caa8f5636f8359840b6" xsi:type="Association" isDirected="true" />
+  </relationships>
+  <organizations>
+    <item>
+      <label xml:lang="en">Strategy</label>
+      <item identifierRef="id-36fed5282b194d3e8c19fd84dc42539c" />
+      <item identifierRef="id-88bd9730d8b8445ba6c018b1b4da6ae8" />
+      <item identifierRef="id-4ce9152f5b4b43c497653a9522b91d7b" />
+    </item>
+    <item>
+      <label xml:lang="en">Business</label>
+      <item identifierRef="id-dbf24f007b2a469c905f962b5387a246" />
+      <item identifierRef="id-44fc92f1da2a498582405948ff7fa9fc" />
+      <item identifierRef="id-b3230e2f99de479fa84fe35674a6bc29" />
+      <item identifierRef="id-f100ae7917984e3496019ade2ce06f2f" />
+      <item identifierRef="id-03dd5366dc384f5cbc2b9468ca6a1dfd" />
+      <item identifierRef="id-eed08b7ebf554101af84453e2b026570" />
+      <item identifierRef="id-eaa23e0b31524de594622e17e1b984e3" />
+      <item identifierRef="id-694e5d9a5a8e4caa8f5636f8359840b6" />
+    </item>
+    <item>
+      <label xml:lang="en">Application</label>
+      <item identifierRef="id-0b1e88a431024c9887bcd5e632013bf7" />
+      <item identifierRef="id-50a9a604e7d64752b3e3a791c9027882" />
+      <item identifierRef="id-1288cab3253f498fb329d858a7c67671" />
+      <item identifierRef="id-4b07f46ff5b246b484e7c942706ac3af" />
+    </item>
+    <item>
+      <label xml:lang="en">Technology &amp; Physical</label>
+      <item identifierRef="id-d51d3bd56bde4564b099d45330edea85" />
+      <item identifierRef="id-be9ff0a7351e4c3eaf14e4e003c78766" />
+      <item identifierRef="id-93548a53d0ff489e92033950d44c6d1e" />
+      <item identifierRef="id-6717158b666546b4a1c3518e501e12f9" />
+      <item identifierRef="id-49faa0b66e034492b2b4595e9dff50c4" />
+      <item identifierRef="id-0cd46c8c144146918e1fed6b7beab359" />
+      <item identifierRef="id-f35610f18c03480b8a6ca200ae3e839d" />
+    </item>
+    <item>
+      <label xml:lang="en">Relations</label>
+      <item identifierRef="id-ceaf322e04b24dc793fb3658458a1b1e" />
+      <item identifierRef="id-6bc70d3b5199421ba60dfbcd44621ec0" />
+      <item identifierRef="id-6394e9a5cc434bfc8d23d80bc52ffede" />
+      <item identifierRef="id-cc2bd385be784ad18bd3e9ce383b7ac1" />
+      <item identifierRef="id-14cbe3b23f304e10939d7af698d908b8" />
+      <item identifierRef="id-90fa9081e12745e4b1cb6bc69e317b13" />
+      <item identifierRef="id-e6e7c82dfc804497a917b2054bfb8215" />
+      <item identifierRef="id-d3989ceb7fb24743ab3b7138f88edda8" />
+      <item identifierRef="id-33e59d85296445f5aeb85265307c84e3" />
+      <item identifierRef="id-4ee121a619f54dfe9245259a5b3a175a" />
+      <item identifierRef="id-a6ba3dbb418b4f7f93e9cff3cc0390fb" />
+      <item identifierRef="id-111909e5dbfd44b3aff04a476509a06c" />
+      <item identifierRef="id-10446782d3174da3bf9e06abe0dd805c" />
+      <item identifierRef="id-63685841cd4147579d13f2abca52914c" />
+      <item identifierRef="id-f59a1096865146edb9e91ca6bd7251cf" />
+      <item identifierRef="id-1cece03c8383494ea1180227c01203fd" />
+      <item identifierRef="id-8b65e6258633466a8cf7e65d7ac6eec7" />
+      <item identifierRef="id-bf61b863d14c4fc1a2c825acb15c90ac" />
+      <item identifierRef="id-026766cd33404d0bb29b24e1b130558b" />
+      <item identifierRef="id-455c9f9e0055460692ae7e6ca54ef739" />
+      <item identifierRef="id-b7387ac69af34b308b06b4cee8929def" />
+      <item identifierRef="id-ee67993d6eae4aef83b6ec4c1ed3c227" />
+      <item identifierRef="id-9ecc03c52cac44238a2d62d063b25dd5" />
+    </item>
+    <item>
+      <label xml:lang="en">Views</label>
+      <item identifierRef="id-5b1d5c704810403bb9044ca65d092111" />
+      <item identifierRef="id-57b0bb5eb2b24a1993d6d7543fe4c8b1" />
+    </item>
+  </organizations>
+  <views>
+    <diagrams>
+     <view identifier="id-57b0bb5eb2b24a1993d6d7543fe4c8b1" xsi:type="Diagram">
+        <name xml:lang="en">PCF in Automotive Supply Chain</name>
+        <node identifier="id-2bed699a4c8947868484c966af9df7b2" elementRef="id-36fed5282b194d3e8c19fd84dc42539c" xsi:type="Element" x="48" y="132" w="421" h="262">
+          <style>
+            <fillColor r="245" g="222" b="170" a="100" />
+            <lineColor r="92" g="92" b="92" a="100" />
+            <font name="Lucida Grande" size="12">
+              <color r="0" g="0" b="0" />
+            </font>
+          </style>
+          <node identifier="id-e6e43bf8709b42b98e6df1404bd2ca8d" elementRef="id-be9ff0a7351e4c3eaf14e4e003c78766" xsi:type="Element" x="72" y="204" w="120" h="55">
+            <style>
+              <fillColor r="201" g="231" b="183" a="100" />
+              <lineColor r="92" g="92" b="92" a="100" />
+              <font name="Lucida Grande" size="12">
+                <color r="0" g="0" b="0" />
+              </font>
+            </style>
+          </node>
+          <node identifier="id-4a55d0173a7c4f6e85537bd401df0dbe" elementRef="id-93548a53d0ff489e92033950d44c6d1e" xsi:type="Element" x="240" y="204" w="120" h="55">
+            <style>
+              <fillColor r="201" g="231" b="183" a="100" />
+              <lineColor r="92" g="92" b="92" a="100" />
+              <font name="Lucida Grande" size="12">
+                <color r="0" g="0" b="0" />
+              </font>
+            </style>
+          </node>
+          <node identifier="id-24025e9862b34756800a931ad5e6c56e" elementRef="id-b3230e2f99de479fa84fe35674a6bc29" xsi:type="Element" x="156" y="288" w="120" h="55">
+            <style>
+              <fillColor r="255" g="255" b="181" a="100" />
+              <lineColor r="92" g="92" b="92" a="100" />
+              <font name="Lucida Grande" size="12">
+                <color r="0" g="0" b="0" />
+              </font>
+            </style>
+          </node>
+          <node identifier="id-da48ecd0c63348c596c007bcb7c7a9ec" elementRef="id-f100ae7917984e3496019ade2ce06f2f" xsi:type="Element" x="324" y="288" w="120" h="55">
+            <style>
+              <fillColor r="255" g="255" b="181" a="100" />
+              <lineColor r="92" g="92" b="92" a="100" />
+              <font name="Lucida Grande" size="12">
+                <color r="0" g="0" b="0" />
+              </font>
+            </style>
+          </node>
+        </node>
+        <node identifier="id-aaa3823145cb4ce3976388c019a66921" elementRef="id-88bd9730d8b8445ba6c018b1b4da6ae8" xsi:type="Element" x="492" y="132" w="589" h="262">
+          <style>
+            <fillColor r="245" g="222" b="170" a="100" />
+            <lineColor r="92" g="92" b="92" a="100" />
+            <font name="Lucida Grande" size="12">
+              <color r="0" g="0" b="0" />
+            </font>
+          </style>
+          <node identifier="id-6526bf9b3ef84736afa76fa3626b39f2" elementRef="id-6717158b666546b4a1c3518e501e12f9" xsi:type="Element" x="529" y="204" w="120" h="55">
+            <style>
+              <fillColor r="201" g="231" b="183" a="100" />
+              <lineColor r="92" g="92" b="92" a="100" />
+              <font name="Lucida Grande" size="12">
+                <color r="0" g="0" b="0" />
+              </font>
+            </style>
+          </node>
+          <node identifier="id-f4f2f28f243b443da73d5db0f5dac3bf" elementRef="id-49faa0b66e034492b2b4595e9dff50c4" xsi:type="Element" x="696" y="204" w="120" h="55">
+            <style>
+              <fillColor r="201" g="231" b="183" a="100" />
+              <lineColor r="92" g="92" b="92" a="100" />
+              <font name="Lucida Grande" size="12">
+                <color r="0" g="0" b="0" />
+              </font>
+            </style>
+          </node>
+          <node identifier="id-a04a53ac950344ea99bf6906dd9e2060" elementRef="id-03dd5366dc384f5cbc2b9468ca6a1dfd" xsi:type="Element" x="612" y="288" w="120" h="55">
+            <style>
+              <fillColor r="255" g="255" b="181" a="100" />
+              <lineColor r="92" g="92" b="92" a="100" />
+              <font name="Lucida Grande" size="12">
+                <color r="0" g="0" b="0" />
+              </font>
+            </style>
+          </node>
+          <node identifier="id-310cd871e0154cd29588e7dbfb101205" elementRef="id-0cd46c8c144146918e1fed6b7beab359" xsi:type="Element" x="864" y="204" w="120" h="55">
+            <style>
+              <fillColor r="201" g="231" b="183" a="100" />
+              <lineColor r="92" g="92" b="92" a="100" />
+              <font name="Lucida Grande" size="12">
+                <color r="0" g="0" b="0" />
+              </font>
+            </style>
+          </node>
+          <node identifier="id-6239c561b6184fddb160a2ae492b4b64" elementRef="id-eed08b7ebf554101af84453e2b026570" xsi:type="Element" x="780" y="288" w="120" h="55">
+            <style>
+              <fillColor r="255" g="255" b="181" a="100" />
+              <lineColor r="92" g="92" b="92" a="100" />
+              <font name="Lucida Grande" size="12">
+                <color r="0" g="0" b="0" />
+              </font>
+            </style>
+          </node>
+          <node identifier="id-ea099d2bb0954b328fa5bf9c65755018" elementRef="id-eaa23e0b31524de594622e17e1b984e3" xsi:type="Element" x="948" y="288" w="120" h="55">
+            <style>
+              <fillColor r="255" g="255" b="181" a="100" />
+              <lineColor r="92" g="92" b="92" a="100" />
+              <font name="Lucida Grande" size="12">
+                <color r="0" g="0" b="0" />
+              </font>
+            </style>
+          </node>
+        </node>
+        <node identifier="id-b879112a8056409fb751d011b7115823" elementRef="id-4ce9152f5b4b43c497653a9522b91d7b" xsi:type="Element" x="1116" y="132" w="313" h="262">
+          <style>
+            <fillColor r="245" g="222" b="170" a="100" />
+            <lineColor r="92" g="92" b="92" a="100" />
+            <font name="Lucida Grande" size="12">
+              <color r="0" g="0" b="0" />
+            </font>
+          </style>
+          <node identifier="id-6af7572fc99d474bae27c01a0324daec" elementRef="id-f35610f18c03480b8a6ca200ae3e839d" xsi:type="Element" x="1152" y="204" w="145" h="55">
+            <style>
+              <fillColor r="201" g="231" b="183" a="100" />
+              <lineColor r="92" g="92" b="92" a="100" />
+              <font name="Lucida Grande" size="12">
+                <color r="0" g="0" b="0" />
+              </font>
+            </style>
+          </node>
+          <node identifier="id-fd064f532f9b4feba48c4b7835b6662a" elementRef="id-694e5d9a5a8e4caa8f5636f8359840b6" xsi:type="Element" x="1248" y="276" w="120" h="55">
+            <style>
+              <fillColor r="255" g="255" b="181" a="100" />
+              <lineColor r="92" g="92" b="92" a="100" />
+              <font name="Lucida Grande" size="12">
+                <color r="0" g="0" b="0" />
+              </font>
+            </style>
+          </node>
+        </node>
+        <connection identifier="id-46bf2b082cf34a888b76278a1393d99b" relationshipRef="id-10446782d3174da3bf9e06abe0dd805c" xsi:type="Relationship" source="id-e6e43bf8709b42b98e6df1404bd2ca8d" target="id-24025e9862b34756800a931ad5e6c56e">
+          <style>
+            <lineColor r="0" g="0" b="0" />
+            <font name="Lucida Grande" size="12">
+              <color r="0" g="0" b="0" />
+            </font>
+          </style>
+        </connection>
+        <connection identifier="id-56703164fff3459aaa53a4705b14dd05" relationshipRef="id-f59a1096865146edb9e91ca6bd7251cf" xsi:type="Relationship" source="id-4a55d0173a7c4f6e85537bd401df0dbe" target="id-da48ecd0c63348c596c007bcb7c7a9ec">
+          <style>
+            <lineColor r="0" g="0" b="0" />
+            <font name="Lucida Grande" size="12">
+              <color r="0" g="0" b="0" />
+            </font>
+          </style>
+        </connection>
+        <connection identifier="id-9f635bf991974aeca9d517ae91fb4190" relationshipRef="id-63685841cd4147579d13f2abca52914c" xsi:type="Relationship" source="id-24025e9862b34756800a931ad5e6c56e" target="id-4a55d0173a7c4f6e85537bd401df0dbe">
+          <style>
+            <lineColor r="0" g="0" b="0" />
+            <font name="Lucida Grande" size="12">
+              <color r="0" g="0" b="0" />
+            </font>
+          </style>
+        </connection>
+        <connection identifier="id-f74c61768160410f9794b676d3b09ed0" relationshipRef="id-1cece03c8383494ea1180227c01203fd" xsi:type="Relationship" source="id-da48ecd0c63348c596c007bcb7c7a9ec" target="id-6526bf9b3ef84736afa76fa3626b39f2">
+          <style>
+            <lineColor r="0" g="0" b="0" />
+            <font name="Lucida Grande" size="12">
+              <color r="0" g="0" b="0" />
+            </font>
+          </style>
+        </connection>
+        <connection identifier="id-92632ecaaf434568900979fa5eaadc8d" relationshipRef="id-8b65e6258633466a8cf7e65d7ac6eec7" xsi:type="Relationship" source="id-6526bf9b3ef84736afa76fa3626b39f2" target="id-a04a53ac950344ea99bf6906dd9e2060">
+          <style>
+            <lineColor r="0" g="0" b="0" />
+            <font name="Lucida Grande" size="12">
+              <color r="0" g="0" b="0" />
+            </font>
+          </style>
+        </connection>
+        <connection identifier="id-b5bcd604681f4dac9d362a601ab70275" relationshipRef="id-026766cd33404d0bb29b24e1b130558b" xsi:type="Relationship" source="id-f4f2f28f243b443da73d5db0f5dac3bf" target="id-6239c561b6184fddb160a2ae492b4b64">
+          <style>
+            <lineColor r="0" g="0" b="0" />
+            <font name="Lucida Grande" size="12">
+              <color r="0" g="0" b="0" />
+            </font>
+          </style>
+        </connection>
+        <connection identifier="id-7adf940efefe4c758cecb59d40b1d401" relationshipRef="id-bf61b863d14c4fc1a2c825acb15c90ac" xsi:type="Relationship" source="id-a04a53ac950344ea99bf6906dd9e2060" target="id-f4f2f28f243b443da73d5db0f5dac3bf">
+          <style>
+            <lineColor r="0" g="0" b="0" />
+            <font name="Lucida Grande" size="12">
+              <color r="0" g="0" b="0" />
+            </font>
+          </style>
+        </connection>
+        <connection identifier="id-06fd57697d9744a188e16b47a25c00ee" relationshipRef="id-b7387ac69af34b308b06b4cee8929def" xsi:type="Relationship" source="id-310cd871e0154cd29588e7dbfb101205" target="id-ea099d2bb0954b328fa5bf9c65755018">
+          <style>
+            <lineColor r="0" g="0" b="0" />
+            <font name="Lucida Grande" size="12">
+              <color r="0" g="0" b="0" />
+            </font>
+          </style>
+        </connection>
+        <connection identifier="id-34d9705cd13a4764b769b06382cdf8ca" relationshipRef="id-455c9f9e0055460692ae7e6ca54ef739" xsi:type="Relationship" source="id-6239c561b6184fddb160a2ae492b4b64" target="id-310cd871e0154cd29588e7dbfb101205">
+          <style>
+            <lineColor r="0" g="0" b="0" />
+            <font name="Lucida Grande" size="12">
+              <color r="0" g="0" b="0" />
+            </font>
+          </style>
+        </connection>
+        <connection identifier="id-85032a7360c74c2baf7be063267cf610" relationshipRef="id-ee67993d6eae4aef83b6ec4c1ed3c227" xsi:type="Relationship" source="id-ea099d2bb0954b328fa5bf9c65755018" target="id-6af7572fc99d474bae27c01a0324daec">
+          <style>
+            <lineColor r="0" g="0" b="0" />
+            <font name="Lucida Grande" size="12">
+              <color r="0" g="0" b="0" />
+            </font>
+          </style>
+        </connection>
+        <connection identifier="id-587ae2889da54ca69f8f2d1b826b5ac1" relationshipRef="id-9ecc03c52cac44238a2d62d063b25dd5" xsi:type="Relationship" source="id-6af7572fc99d474bae27c01a0324daec" target="id-fd064f532f9b4feba48c4b7835b6662a">
+          <style>
+            <lineColor r="0" g="0" b="0" />
+            <font name="Lucida Grande" size="12">
+              <color r="0" g="0" b="0" />
+            </font>
+          </style>
+        </connection>
+      </view>
+    </diagrams>
+  </views>
+</model>
